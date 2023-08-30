@@ -9,30 +9,35 @@
 
 <body>
 	<div class="rootpage">
-		<h1>Marking «zlatmax»</h1>
-		<div class="rootpage__info">
-			Project Features
+		<div class="rootpage__logo">
+			<img src="img/BeLogo.svg" alt="logo">
 		</div>
-		<h2>Finished pages:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Home</a></li>
-			<li><a target="_blank" href="catalog.html">Каталог</a></li>
-			<li><a target="_blank" href="product.html">Карточка товара</a></li>
-		</ol>
-		<h2>Popups:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Thank you for the order!</h2>
-			<p>I'd be happy to get good feedback.</p>
-			<p>Come again!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Contacts:</h2>
-			<p>E-mail: <a href="mailto:email@gmail.com">belyakov1191@gmai.com</a></p>
-			<p>Phone: <a href="tel:89672014310">8 967 201 43-10</a></p>
-			<p>Telegram: <a href="https://telegram.org/" target="_blank">@WhiTe506</a></p>
+		<div class="rootpage-info__item">
+			<h1>Marking "zlatmax"</h1>
+			<div class="rootpage__info">
+				Project Features
+			</div>
+			<h2>Finished pages:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html">Home</a></li>
+				<li><a target="_blank" href="catalog.html">Catalog</a></li>
+				<li><a target="_blank" href="product.html">Product</a></li>
+			</ol>
+			<h2>Popups:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html#"></a></li>
+			</ol>
+			<div class="rootpage__tnx">
+				<h2>Thank you for the order!</h2>
+				<p>I'd be happy to get good feedback.</p>
+				<p>Come again!</p>
+			</div>
+			<div class="rootpage__contacts">
+				<h2>Contacts:</h2>
+				<p>E-mail: <a href="mailto:email@gmail.com">belyakov1191@gmail.com</a></p>
+				<p>Phone: <a href="tel:89672014310">8 (967) 201-43-10</a></p>
+				<p>Telegram: <a href="https://telegram.org/" target="_blank">@WhiTe506</a></p>
+			</div>
 		</div>
 	</div>
 </body>
@@ -57,7 +62,7 @@
 		min-width: 320px;
 		width: 100%;
 		color: #fff;
-		background-color: #006A55;
+		background-color: #25242D;
 	}
 
 	body {
@@ -69,12 +74,12 @@
 
 	a {
 		text-decoration: underline;
-		color: #ebe691
+		color: #AAA285;
 	}
 
 	a:visited {
 		text-decoration: underline;
-		color: #aaa768;
+		color: #AAA285;
 	}
 
 	a:hover {
@@ -86,7 +91,10 @@
 	}
 
 	img {
-		vertical-align: top;
+		width: 100px;
+		height: auto;
+		min-width: 100%;
+		/* vertical-align: top; */
 	}
 
 	.wrapper {
@@ -98,19 +106,35 @@
 	.rootpage {
 		padding: 30px;
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		gap: 80px;
 	}
 
 	@media (max-width: 767px) {
 		.rootpage {
 			padding: 30px 15px;
+			gap: 40px;
+		}
+
+		@media (max-width: 480px) {
+			.rootpage {
+				padding: 30px 15px;
+				gap: 25px;
+			}
+		}
+
+		@media (max-width: 380px) {
+			.rootpage {
+				padding: 30px 15px;
+				gap: 15px;
+			}
 		}
 	}
 
 	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
+		color: #E4E3CE;
+		font-size: 2.3rem;
 		margin: 0px 0px 1.25rem 0px;
 	}
 
@@ -122,7 +146,7 @@
 	}
 
 	h2 {
-		color: #ebe691;
+		color: #E4E3CE;
 		font-size: 1.25rem;
 		margin: 0px 0px 1rem 0px;
 	}
@@ -133,6 +157,8 @@
 			margin: 0px 0px 1rem 0px;
 		}
 	}
+
+	.rootpage__logo {}
 
 	.rootpage__info {
 		line-height: 140%;
@@ -149,7 +175,8 @@
 
 	.rootpage__contacts,
 	.rootpage__tnx {
-		border-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
 		padding: 20px 65px;
 		line-height: 140%;
 	}
@@ -158,22 +185,31 @@
 
 		.rootpage__contacts,
 		.rootpage__tnx {
-			border-radius: 40px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
 			padding: 20px;
 		}
 	}
 
+	@media (max-width: 480px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			padding: 10px;
+		}
+	}
+
 	.rootpage__contacts {
-		background: #A66900;
+		background: #293038;
 
 	}
 
 	.rootpage__contacts a {
-		color: #ebe691;
+		color: #AAA285;
 	}
 
 	.rootpage__tnx {
-		background: #9E0016;
+		background: #293038;
 		margin: 0px 0px 1rem 0px;
 	}
 </style>

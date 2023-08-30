@@ -2315,7 +2315,7 @@ body::after {
   margin-bottom: 1.4444444444em;
 }
 
-.footer-subscribe__line .form__error {
+.footer-subscribe__line ._form-error {
   position: absolute;
   bottom: -0.9375rem;
   font-size: 0.625rem;
